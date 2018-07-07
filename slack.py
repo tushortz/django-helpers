@@ -17,9 +17,9 @@ import os
 
 
 def post_to_channel(subject, text, color="#00ff00", time=time.time()):
-    webhook_url = 'https://hooks.slack.com/services/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'
-    icon = "https://academe.herokuapp.com/static/img/favicon.ico"
-    homepage = "http://academe.herokuapp.com"
+    webhook_url = 'https://hooks.slack.com/services/whatever-url'
+    icon = "https://somewebsite.com/static/img/favicon.ico"
+    homepage = "http://somewebsite.com"
     slack_data = {
         "attachments": [
             {
@@ -30,7 +30,7 @@ def post_to_channel(subject, text, color="#00ff00", time=time.time()):
                 "title": subject,
                 "title_link": homepage,
                 "text": text,
-                "footer": "Literature review",
+                "footer": "footer text",
                 "footer_icon": icon,
                 "ts": time
             }
