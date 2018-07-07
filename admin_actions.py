@@ -8,7 +8,7 @@ def export_to_csv(modeladmin, request, queryset):
 
 
 def assign_members_to_self(modeladmin, request, queryset):
-    queryset.update(shepherd=request.user.id)
+    queryset.update(field_name=request.user.id)
 
 
 export_to_csv.short_description = 'Export to csv'
