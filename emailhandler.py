@@ -3,8 +3,8 @@ import os
 
 
 def send_email(recipients, subject, body):
-    gmail_user = os.environ.get("EMAIL") # can change it to hardcoded value
-    password = os.environ.get("PASS")
+    gmail_user = os.environ.get("EMAIL") or "myemail@gmail.com"
+    password = os.environ.get("PASSWORD") or "mypassword"
 
     gmail_pwd = password
     FROM = gmail_user
