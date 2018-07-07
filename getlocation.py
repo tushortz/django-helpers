@@ -1,11 +1,13 @@
 import requests
 
+# not sure if this still works as Google may have changed the way their API works now
 def getdata(origin, destination, mode="walking"):
+    API_KEY = "my_api_key"
     destinations = "|".join(destination)
     result = []
 
     url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + \
-	origin + "&destinations=" + destinations + "&mode=" + mode + "&key=AIzaSyD68CJlpEQG9PvVvk95liARUfUuSfnSTy0"
+	origin + "&destinations=" + destinations + "&mode=" + mode + "&key=" + API_KEY
 
     r = requests.get(url)
     data = r.json()
